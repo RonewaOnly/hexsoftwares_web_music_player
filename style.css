@@ -17,18 +17,21 @@ header {
     font-size: 2rem;
     text-transform: uppercase;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 100%;
 }
 
 /* Music Player Screen */
 .music-player-screen {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100vw;
     min-height: 100vh;
-    padding: 20px 0;
+    padding: 20px;
 }
 
+/* Music Container */
 .music-container {
     display: flex;
     flex-direction: column;
@@ -49,6 +52,7 @@ header {
     flex-direction: column;
     align-items: center;
     margin: 20px;
+    text-align: center;
 }
 
 .music-info #title {
@@ -56,7 +60,6 @@ header {
     font-weight: bold;
     margin-bottom: 20px;
     color: #f1c40f;
-    text-align: center;
 }
 
 .music-info .progress-container {
@@ -100,18 +103,19 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
     margin: 20px 0;
 }
 
 .action-btn {
     background-color: #1abc9c;
     color: #fff;
-    padding: 12px 25px;
+    padding: 12px 20px;
     border: none;
     border-radius: 50px;
-    margin: 0 10px;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }
@@ -124,11 +128,11 @@ header {
 .action-btn-big {
     background-color: #e74c3c;
     color: #fff;
-    padding: 20px 40px;
+    padding: 15px 30px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     transition: all 0.3s ease;
 }
 
@@ -140,16 +144,30 @@ header {
 /* Queue Container */
 .quene-container {
     margin-top: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     width: 100%;
     max-width: 600px;
     overflow-y: auto;
     max-height: 300px;
-    animation: fadeIn 1.5s ease-in-out;
-    
+    animation: fadeInQuene 1.5s ease-in-out;
+}
+
+/* Custom Scrollbar */
+.quene-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.quene-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.quene-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
 }
 
 .quene-container ul {
@@ -159,20 +177,89 @@ header {
 }
 
 .quene-container li {
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.15);
     margin-bottom: 10px;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     text-align: center;
     font-size: 1rem;
-    color: #fff;
+    font-weight: 500;
+    color: #f1f1f1;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .quene-container li:hover {
-    background-color: #3498db;
-    transform: translateY(-5px);
+    background-color: #02cba9;
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    header {
+        font-size: 1.8rem;
+    }
+
+    .music-info #title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .music-container {
+        padding: 15px;
+    }
+
+    .img-container {
+        width: 180px;
+        height: 180px;
+    }
+
+    .action-btn,
+    .action-btn-big {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    .quene-container {
+        max-height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.5rem;
+    }
+
+    .img-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    .action-btn,
+    .action-btn-big {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+
+    .music-info #title {
+        font-size: 1.4rem;
+    }
+}
+
+/* Smooth Fade-In Animation */
+@keyframes fadeInQuene {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Animations */
