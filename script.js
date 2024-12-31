@@ -22,10 +22,15 @@ const songs = [
   },
   
   {
-    title: "Incomple",
-    src: "/assets/music/I_Want_It_That_Way.mp3",
+    title: "Incomplete",
+    src: "/assets/music/Backstreet Boys - Incomplete (Official HD Video) [WVe80iZtlYU].mp3",
     cover: "img/i-want-it-that-way.jpg",
   },
+    {
+        title: "Shape of My Heart",
+        src: "/assets/music/Backstreet Boys - Shape Of My Heart (Official HD Video) [OT5msu-dap8].mp3",
+        cover: "img/shape-of-my-heart.jpg",
+    }
 ];
 
 let currentSongIndex = 0;

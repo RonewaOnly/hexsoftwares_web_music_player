@@ -26,12 +26,19 @@
             <div class="progress" id="progress"></div>
           </div>
         </div>
-        <audio id="audio"></audio>
+        <audio id="audio" controls controlslist="nodownload" preload="metadata">
+          <source src="audio/night-owl.mp3" type="audio/mp3" />
+          Your browser does not support the audio element.
+        </audio>
         <div class="navigation">
           <button id="prev" class="action-btn" aria-label="Previous Song">
             <i class="fas fa-backward"></i>
           </button>
-          <button id="play" class="action-btn action-btn-big" aria-label="Play/Pause">
+          <button
+            id="play"
+            class="action-btn action-btn-big"
+            aria-label="Play/Pause"
+          >
             <i class="fas fa-play"></i>
           </button>
           <button id="next" class="action-btn" aria-label="Next Song">
@@ -47,8 +54,6 @@
       </div>
     </main>
 
-    <script src="script.js">
-
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
