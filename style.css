@@ -208,6 +208,11 @@ header {
 }
 
 @media (max-width: 768px) {
+    .music-player-screen{
+        padding: 10px;
+        
+        flex-direction: column;
+    }
     .music-container {
         padding: 15px;
     }
@@ -229,6 +234,11 @@ header {
 }
 
 @media (max-width: 480px) {
+    .music-player-screen{
+        padding: 10px;
+
+        flex-direction: column;
+    }
     header {
         font-size: 1.5rem;
     }
