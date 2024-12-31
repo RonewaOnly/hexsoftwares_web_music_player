@@ -13,23 +13,23 @@ const songs = [
     {
         title: "As Long As You Love Me",
         src: "./assests/music/Backstreet Boys - As Long As You Love Me (Official HD Video) [0Gl2QnHNpkA].mp3",
-        cover: "img/as-long-as-you-love-me.jpg",
+        cover: "./assests/images/as-long-as-you-love-me.png",
     },
     {
         title: "Everybody (Backstreet's Back)",
         src: "./assests/music/Backstreet Boys - Everybody (Backstreet's Back) (Official HD Video) [6M6samPEMpM].mp3",
-        cover: "img/everybody.jpg",
+        cover: "./assests/images/everybody.png",
     },
 
     {
         title: "Incomplete",
         src: "./assests/music/Backstreet Boys - Incomplete (Official HD Video) [WVe80iZtlYU].mp3",
-        cover: "img/i-want-it-that-way.jpg",
+        cover: "./assests/images/i-want-it-that-way.png",
     },
     {
         title: "Shape of My Heart",
         src: "./assests/music/Backstreet Boys - Shape Of My Heart (Official HD Video) [OT5msu-dap8].mp3",
-        cover: "img/shape-of-my-heart.jpg",
+        cover: "./assests/images/shape-of-my-heart.png",
     }
 ];
 
